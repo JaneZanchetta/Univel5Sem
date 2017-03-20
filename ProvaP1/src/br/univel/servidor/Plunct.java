@@ -28,22 +28,20 @@ public class Plunct extends Thread implements Runnable, Plact {
 		if (this.vlr == null) {
 			this.vlr = rec;
 		} else {
-			this.vlr = +rec;
+			this.vlr +=rec;
 		}
 		System.out.println(vlr + 11);
 		if (vlr >= 0 && vlr < 30) {
 			vlr += 1;
 			return vlr;
+		} else if (vlr >= 30 && vlr < 70) {
+			vlr += 2;
+			return vlr;
 		} else {
-			if (vlr >= 30 && vlr < 70) {
-				vlr = +2;
-				return vlr;
-			} else {
-				vlr += 3;
-				return vlr;
-			}
-
+			vlr += 3;
+			return vlr;
 		}
+
 	}
 
 	public static void main(String[] args) {
